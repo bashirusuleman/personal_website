@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
-* {
+*{
   margin: 0;
   padding: 0;
   font-family: "Poppins", sans-serif;
@@ -9,7 +9,7 @@
 
 body {
   overflow-x: hidden;
-  overflow: scroll;
+  overflow: scroll; 
 }
 
 /*-----------------NAVIGATION SECTION---------------------------*/ 
@@ -23,6 +23,7 @@ nav {
   top: 0;
   transition: transform 0.3s;
   transition: background 250ms ease-in;
+  text-align: center;
 }
 
 .scrolled {
@@ -113,7 +114,7 @@ nav {
 .about {
   height: 200vh;
   width: 100%;
-  background-color: #ff4a54;
+  background-color: #fff;
 }
 .projects {
   height: 100vh;
@@ -168,6 +169,7 @@ nav {
     -webkit-clip-path: circle(50px at 90% -10%);
     transition: all 1s ease-out;
     pointer-events: none;
+    
   }
 
   .open {
@@ -209,6 +211,8 @@ nav {
   li.fade {
     opacity: 1;
   }
+
+ 
 }
 /*  Animating Hamburger icon on click   */
 .toggle .line1 {
@@ -224,36 +228,53 @@ nav {
 }
 
 /*----------------------------HOME SECTION -----------------------------*/
-#name-title {
+.home{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+ 
+
+}
+
+#name-title h2{
   color: #fff;
   font-family: "Roboto", sans-serif;  
   font-weight: 800;
-  padding: 0;
-}
+  font-size: 3rem;
+  line-height: 1.2;
+  }
+
 #name-title h5 {
   color: #dfd3c3;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  font-size: 1.1rem;
-  line-height: 1.3;
+  font-size: 1rem;
+  line-height: 1.1;  
+}
 
-  margin: 0;
-}
-#name-title h2 {
-  font-size: 3rem;
-  margin: 0;
-}
 #lastname {
   color: #ffc93c;
 }
 
+.quotes{
+  position: absolute;
+  bottom:2px;
+  color: #a6a9b6;
+  font-style: italic; 
+  margin-top:5px;
+}
+
+.quotes h3{
+  color: #d1c145
+}
+#author{
+  color:#d0e8f2;
+}
 /*---------------------------------------ABOUT SECTION ------------------------------*/
 
-#about-section{
-  margin: auto 200px;
-  color: #111d5e;
-  font-family: "Roboto", sans-serif;
-}
 
 .about-heading{
   font-size:1.6rem;
@@ -264,7 +285,7 @@ nav {
  .about-body{
   display:flex;
   flex-direction:row; 
-  margin-top:20px; 
+
 } 
 
 .about-body-section p{
@@ -273,15 +294,41 @@ nav {
   text-align: justify;
   }
 
+#about-section{
+  margin: auto 200px;
+  color: #111d5e;
+  font-family: "Roboto", sans-serif;
+}
+
+.section-heading{
+  font-family: "Roboto", sans-serif;  
+  font-weight: 800;
+  font-size: 2rem;
+  line-height: 1.2;  
+  color: #ffc93c;
+  text-align: center;
+  text-transform: uppercase;
+  padding-top:2rem;
+ }
+ .about-body{
+  display:grid;
+  grid-template-columns: 4fr 1fr;
+ 
+  
+} 
+
+.about-body-section-1 p{
+  font-size: 1.2rem;
+  line-height: 1.3;  
+  }
+
 .about-image img{
   border: double 10px #CFD3CE;
   border-radius:3%;
   margin:60px 0 0 30px;
 }
 
-#kodekloud {
-  color: #11698e;
-} 
+
 
 button {
   background-color:#394989;
@@ -306,7 +353,69 @@ button:hover {
 .icons-items{
   margin:auto 160px;
 }
-.fa{
-  font-size:60px;
+.icon{
+  font-size:3rem;
   padding:20px;
+  
+}
+
+
+/*-----------------------------------------CERTIFICATICATIONS------------------------------------*/
+.certification-items{
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+.fa-external-link{
+   font-size:20px;
+  padding:10px;
+  }
+
+
+/*----------------------------------------CONTACT SECTION-----------------------------------*/
+
+.contact-heading{
+  text-align:center;
+  color:#d92027 ;
+  font-weight: 800;
+  font-size:1.9rem;
+}
+
+/* FORM STYLES */
+.contact form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap:10px;
+}
+.contact form label{
+  display: block;
+  color:#09B1EC;
+  font-weight: 600;
+}
+
+.contact form .full{
+  grid-column: 1 / 3;
+}
+
+
+.contact form button,.contact form input,.contact form textarea{
+  width:100%;
+  font-size:1.8rem;
+  padding:0.6rem;
+  border: 1px solid #c9e6ff;
+   
+}
+.contact form button {
+  background-color:#09B1EC;
+  text-transform: uppercase;
+  border:none;
+  font-size:1.4rem;
+  color:#fff;
+  width:70%;
+  margin-left: 60px;
+}
+
+.contact form button:hover, .contact form button:focus {
+  background-color:#3D7EA6;
+  color:#40a8c4;
+  transition: background-color 2s ease-out;
 }

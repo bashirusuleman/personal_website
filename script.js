@@ -27,3 +27,25 @@ const homeObserver = new IntersectionObserver(function (entries, homeObserver) {
 }, homeOptions);
 
 homeObserver.observe(home);
+
+/*-------------------------------QUOTES API SECTION ----------------*/
+const quote = document.getElementById("quote-of-day");
+const author = document.getElementById("author");
+let randomIndex = null;
+fetch("https://type.fit/api/quotes")
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (data) {
+    for (let i = 0; i < data.length; ++i) {
+      randomIndex = Math.floor(Math.random() * i);
+    }
+    quote.innerHTML = data[randomIndex].text;
+
+    /*-----Checking for Anonymous quotes----*/
+    if (data[randomIndex].author == null) {
+      author.innerHTML = "Anonymous";
+    } else {
+      author.innerHTML = data[randomIndex].author;
+    }
+  });
