@@ -1,64 +1,186 @@
 <!DOCTYPE html>
-<html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Bashiru Suleman</title>
+    <title>BASHIRU SULEMAN</title>
   </head>
   <body>
-    <div class=header>
+    <nav>
+      <div class="hamburger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+      <div class="navbar">        
+        <ul class="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Skills</a></li>
+          <li><a href="#">Contact</a></li>
+      </div>
+    </nav>
+    <section class="home">
       <div id=name-title>
-        <h2> BASHIRU <span id=lastname>SULEMAN</span>
+        <h2> BASHIRU <span id=lastname>SULEMAN</span></h2>
         <h5> CLOUD ENGINEER  |  SYSTEMS ENGINEER  |  DEVOPS ENGINEER </h5>
        </div>
-       <nav>
-        <ul class="nav-class">
-          <li class="nav-item">
-            <a href="index.html" class="nav-link">HOME</a>
-          </li>
-          <li class="nav-item">
-            <a href="" class="nav-link">PORTFOLIO</a>
-          </li>
-          <li class="nav-item">
-              <a href="certification.html" class="nav-link">SKILLS & CERTIFICATIONS</a>
-          </li>          
-          <li class="nav-item">
-            <a href="contact.html" class="nav-link">CONTACT</a>
-          </li>
-        </ul>
-       <nav>
-      <nav>
-    </div>
-  <section id="about-section">    
-    <div class="about-body">
-      <div  class="about-body-section">
-        <div class="about-heading">
-          <h4>About Bashiru</h4>
+       <div class="quotes">
+         <h3>Random quote of the day:</3>
+         <h4 id="quote-of-day"></h4>
+         <p id="author"></p>
+       </div>
+    </section>
+    <section class=>
+      <section>
+      <div class="section-heading">
+        <h2>ABOUT</h2>
+      </div>      
+      <div class="about-body"> 
+        <div class="about-body-section">                 
+          <p>Bashiru is a skilled Cloud engineer with experience in network automation, infrastructure and application deployment. With over 6 years experience in IT/Telecommunication, and 2 years experience in cloud technologies, I can deploy and manage infrastructure  as well as applications both on premises and in the cloud. Currently working to gain hands-on skills in DevOps using various technologies and tools such as: Kubernetes, Docker, Ansible, Terraform, Web Servers and Databases</p>
+          <p>I also have vast experience in Telecommunication design and build, managing data centers and access network infrastructure design using coaxial cable and fibre.</p>
         </div>
-        <p>Bashiru is a skilled Cloud engineer with experience in network automation, infrastructure and application deployment. With over 6 years experience in IT/Telecommunication, and 2 years experience in cloud technologies, I can deploy and manage infrastructure  as well as applications both on premises and in the cloud. Currently working virtually in <a  id="kodekloud" href="https://www.kodekloud-engineer.com/" target="_blank"> KodeKloud-Engineer</a> as a DevOps Engineer using various technologies and tools such as: Kubernetes, Docker, Ansible, Terraform, Web Servers and Databases</p>
-        <p>I also have vast experience in Telecommunication design and build, managing data centers and access network infrastructure design using coaxial cable and fibre.
-        </p>
+        <div class="about-image">
+          <img src="images/bash1.jpg" alt="Bashiru'Picture">
+        </div>
+        <div class="about-body-icon">
+          <a href="https://linkedin.com/in/bashirusuleman" target="_blank"><i class="fa fa-linkedin fa-3x icon"></i></a>
+          <a href="https://github.com/bashirusuleman"  target="_blank"><i class="fa fa-github fa-4x icon"></i></a>      
+          <a href=""><button id="resume-button">RESUME</button></a>
+        </div> 
+        <div class="about-body-section">
+          <p >I graduated with a Masters degree in Electronic Systems Engineering from the University of Regina, SK, Canada, Bachelor of Engineering in Electrical/Electronic Engineering (graduated with First Class honors) and Diploma in Computer Engineering (graduated with Distinction)  from the University of Benin, Nigeria. I attended formal trainings in Cloud and DevOps engineering as well as a robust self-directed learning of tools and technologies to architect, build, automate, deploy and manage  applications.</p>
+        </div>          
+      </section> 
+
+    <section class="projects">
+        <div class="section-heading">
+            <h2>PROJECTS</h2>
+        </div>
+        <div class="project-items">
+          <ul>
+            <li class="projects-list">
+              <h4 class="project-title">Lorem ipsum dolor sit.</h4>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit provident accusantium, reprehenderit corrupti eum mollitia inventore esse praesentium enim ullam modi. Ad eius maxime doloremque saepe qui earum necessitatibus deserunt!</p>
+              <button class="github-projects">Github</button>
+            </li>
+            <li class="projects-list">
+              <h4 class="project-title">Lorem ipsum dolor sit.</h4>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit provident accusantium, reprehenderit corrupti eum mollitia inventore esse praesentium enim ullam modi. Ad eius maxime doloremque saepe qui earum necessitatibus deserunt!</p>
+              <button class="github-projects">Github</button>
+            </li>
+            <li class="projects-list"> 
+              <h4 class="project-title">Lorem ipsum dolor sit.</h4>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit provident accusantium, reprehenderit corrupti eum mollitia inventore esse praesentium enim ullam modi. Ad eius maxime doloremque saepe qui earum necessitatibus deserunt!</p>
+              <button class="github-projects">Github</button>
+            </li>
+          </ul>
+        </div>
+    </section>
+    <section class="skills">
+      <div class="section-heading">
+        <h2>CERTIFICATIONS & SKILLS</h2>
       </div>
-      <div class="about-image">
-        <img src="images/bash1.jpg" alt="Bashiru Picture">
+      <div class="skills-body">
+        <h4 class="certification-heading">Certifications</h4>
+        <p class="certification-text">Below are some of my certifications and verified international education, Click to verify<a href="https://www.youracclaim.com/users/bashiru-suleman" target="_blank"><i class="fa fa-external-link fa-1x"></i></a></p>
+       <ul class="certification-items">
+           <li class="certification-list"><img src="images/CKA-Cert.JPG" alt="Badge for CKA"></li>
+           <li class="certification-list"><img src="images/AWS-Sysops-Cert.JPG" alt="Badge for AWS Sysops"></li>
+           <li class="certification-list"><img src="images/AWS-SAA.JPG" alt="Badge for AWS-SAA"></li>
+           <li class="certification-list"><img src="images/Verified Internation Credentials.JPG" alt="WES-Verification"></li>
+           <li class="certification-list"><img src="images/PMP-Cert.JPG" alt="PMP"></li>
+       </ul>
+     
+       <h4 class="certification-heading">Skills</h4>
+       <p class="certification-text">Below are some of the tools and technologies I have worked with. I also engaged in self-directed continous learning to broaden my understanding of respective technologies.</p>
+    
+     <div class=skills-list>
+       <ol>
+         <li class="skills-tools">KUBERNETES</li>
+         <p>Courses & Training</p>
+          <ul>
+              <li>Kubernetes for the Absolute Beginners - Hands-on-KodeKloud</li> 
+              <li>Certified Kubernetes Administrator (CKA) with Practice Tests-KodeKloud</li>
+              <li>Certified Kubernetes Application Developer (CKAD)-KodeKloud</li>
+              <p>Course Project</p>  
+            </ul>
+         <li class="skills-tools">DOCKER</li>
+         <p>Courses & Training</p>
+          <ul>
+            <li>Docker for the Absolute Beginner - Hands On-KodeKloud</li> 
+            <li>Docker - SWARM | SERVICES | STACKS - Hands-on-KodeKloud</li>
+            <p>Course Project</p>  
+          </ul>         
+         <li class="skills-tools">AMAZON WEB SERVICE (AWS)</li>
+         <p>Courses & Training</p>
+          <ul>
+            <li>AWS Certified Solutions Architect-Udemy</li> 
+            <li>Ultimate AWS Certified Developer Associate-Udemy</li>
+            <li>Ultimate AWS Certified SysOps Administrator Associate-Udemy</li>
+            <li>Serverless computing in AWS-Udemy</li>
+            <p>Course Project</p>  
+          </ul>
+         <li class="skills-tools">TERRAFORM</li>
+         <p>Courses & Training</p>
+          <ul>
+            <li>Docker for the Absolute Beginner - Hands On</li> 
+            <li>Docker - SWARM | SERVICES | STACKS - Hands-on</li>
+            <p>Course Project</p>  
+          </ul>    
+         <li class="skills-tools">ANSIBLE</li>
+         <p>Courses & Training</p>
+          <ul>
+            <li>Docker for the Absolute Beginner - Hands On</li> 
+            <li>Docker - SWARM | SERVICES | STACKS - Hands-on</li>
+            <p>Course Project</p>  
+          </ul>  
+        <li class="skills-tools">GIT</li>  
+         <li class="skills-tools">LINUX</li>
+         <li class="skills-tools">HTML & CSS-(Self-taught)</li>
+         <li class="skills-tools">JAVASCRIPT-(Self-taught)</li>
+         <li class="skills-tools">PYTHON-(Self-taught)</li>
+         
+       </ol>
+     </div>
+     </div>
+     </section>
+    </section>
+    <div class="contact">
+      <div class="section-heading">
+        <h2>CONTACT</h2>
+      </div>
+      <div>
+        <p>I am currently open for new opportunities in Cloud Engineering and DevOps. You can use the contact form below to reach me.</p>
+      </div>        
+      <div class="contact-form">  
+            <form>            
+                <div class="contact-details">
+                  <label class="contact-label">Name</label>
+                  <input type="text" class="form-control">
+                </div>
+                <div class="contact-details">
+                  <label class="contact-label">Email</label>
+                  <input type="email" class="form-control">
+                </div>               
+                <div class="contact-details">
+                  <label class="contact-label">Message</label>
+                  <textarea name="message" rows="5" cols="30" id="comments" class="form-control"></textarea> 
+                </div>
+                <div>    
+                  <input type="button" value="Submit" id="btn">  
+                </div> 
+              </form>
       </div>
     </div>
-    <div class="about-body">
-      <div class="icons-items">
-      <a href="https://linkedin.com/in/bashirusuleman"><i class="fa fa-linkedin"></i></a>
-      <a href=""><i class="fa fa-github"></i></a>
-      <a href=""><button>RESUME</button></a>
-    </div>  
-    <div class="about-body-section">
-      <p>I graduated with a Masters degree in Electronic Systems Engineering from the University of Regina, SK, Canada, Bachelor of Engineering in Electrical/Electronic Engineering (graduated with First Class honors) and Diploma in Computer Engineering (graduated with Distinction)  from the University of Benin, Nigeria. I attended formal trainings in Cloud and DevOps engineering as well as a robust self-directed learning of tools and technologies to architect, build, automate, deploy and manage  applications.</p>
     </div>
-  </section>
-  <footer>
-   <p class="footer-note">&copy; Designed By: Bashiru Suleman</p> 
-  </footer>
+    <script type="text/javascript" src="script.js"> 
+    
+    </script>
   </body>
 </html>
