@@ -36,6 +36,7 @@ nav {
   transition: transform 0.3s;
   transition: background 250ms ease-in;
   text-align: center;  
+  z-index: 3;
 }
 
 .scrolled {
@@ -131,10 +132,11 @@ nav {
   margin:auto;
 }
 .projects {
-  height: 100vh;
+  height: 100%;
   width: 100%;
-  background-color: #f8f1f1;
-}
+  background-color: #f8f1f1; 
+  padding-bottom: 40px;
+ }
 
 
 @media screen and (max-width: 600px) {
@@ -153,9 +155,7 @@ nav {
     z-index: 2;
     transition: all 0.7s ease;
   }
-  .logo {
-    margin-right: 115vw;
-  }
+  
   .nav-links {
     flex-direction: column;
   }
@@ -245,8 +245,6 @@ nav {
   align-items: center;
   text-align: center;
   min-height: 100vh;
- 
-
 }
 
 #name-title h2{
@@ -275,6 +273,7 @@ nav {
   color: #a6a9b6;
   font-style: italic; 
   margin-top:5px;
+
 }
 
 .quotes h3{
@@ -287,7 +286,7 @@ nav {
 
 
 /*---------------------------------------ABOUT SECTION ------------------------------*/
-button {
+#resume-button {
   background-color:#394989;
   border: none;
   color: #fff ;
@@ -299,11 +298,12 @@ button {
   transition: transform 0.4s ease;
 }
 
-button:hover {
+#resume-button:hover {
   background-color: #fff; 
   color: #394989; 
   border: 4px solid #394989;
-  padding:  11px 28px;     
+  padding:  11px 28px; 
+  cursor: pointer;    
 }
 .about-body{
   display:grid;
@@ -322,12 +322,62 @@ button:hover {
   text-align: center;
 }
 
+.about-body-section p{
+ margin:10px 0;
+}
+
+.fa-linkedin{
+  color:#fff;
+  background-color:#46b3e6;
+}
+
+.fa-github{
+  color:#000;
+}
 .icon{ 
   padding:20px;  
 }
 
+/*---------------------------------------PROJECTS SECTION ------------------------------*/
 
+.project-items{
+  margin: 40px 80px;
+  line-height: 1.5;
+  font-family: "Roboto", sans-serif;
+}
 
+.project-items ul{
+  list-style: square outside none; 
+ }
+.projects-list{
+  padding:10px 0;
+}
+.project-title{
+  color:#394989;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  }
+
+.github-projects {
+  background-color:#394989;
+  border: none;
+  color: #fff ;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding:10px;
+  border: 4px;
+  font-size: 1.2rem;
+  transition: transform 0.4s ease;
+}
+
+.github-projects:hover {
+  background-color: #fff; 
+  padding:6px;
+  color: #394989; 
+  border: 4px solid #394989;
+  cursor: pointer;    
+}
 
 
 
