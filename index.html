@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style.css">    
+    <link rel="stylesheet" href="style.css" media="all">    
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>BASHIRU SULEMAN</title>
@@ -129,17 +129,14 @@
          <li class="skills-tools">TERRAFORM</li>
          <p>Courses & Training</p>
           <ul>
-            <li>Docker for the Absolute Beginner - Hands On</li> 
-            <li>Docker - SWARM | SERVICES | STACKS - Hands-on</li>
+            <li>Terraform for Beginners-KodeKloud</li>             
             <p>Course Project</p>  
           </ul>    
          <li class="skills-tools">ANSIBLE</li>
          <p>Courses & Training</p>
           <ul>
-            <li>Docker for the Absolute Beginner - Hands On</li> 
-            <li>Docker - SWARM | SERVICES | STACKS - Hands-on</li>
-            <p>Course Project</p>  
-          </ul>  
+            <li>Ansible for the Absolute Beginners-KodeKloud</li>           
+         </ul>  
         <li class="skills-tools">GIT</li>  
          <li class="skills-tools">LINUX</li>
          <li class="skills-tools">HTML & CSS-(Self-taught)</li>
@@ -151,36 +148,36 @@
      </div>
      </section>
     </section>
-    <div class="contact">
+    <section class="contact">
       <div class="section-heading">
         <h2>CONTACT</h2>
       </div>
-      <div>
-        <p>I am currently open for new opportunities in Cloud Engineering and DevOps. You can use the contact form below to reach me.</p>
-      </div>        
+      <div class="contact-body">
+        <p>I am currently open for new opportunities in Cloud Engineering and DevOps. You can use the contact form below to reach me.</p>           
       <div class="contact-form">  
-            <form>            
+            <form id="formdata" action="" method="POST">            
                 <div class="contact-details">
                   <label class="contact-label">Name</label>
-                  <input type="text" class="form-control">
+                  <input type="text" class="form-control" id="name"  required>
                 </div>
                 <div class="contact-details">
                   <label class="contact-label">Email</label>
-                  <input type="email" class="form-control">
+                  <input type="email" class="form-control" id="email" >
                 </div>               
                 <div class="contact-details">
                   <label class="contact-label">Message</label>
-                  <textarea name="message" rows="5" cols="30" id="comments" class="form-control"></textarea> 
+                  <textarea name="message" rows="5" cols="30" id="message" class="form-control"  required></textarea> 
                 </div>
-                <div>    
-                  <input type="button" value="Submit" id="btn">  
+                <div>   
+                 <button type="submit">Submit</button> 
                 </div> 
               </form>
+       </div>    
       </div>
-    </div>
-    </div>
+      </section>
+
     <script type="text/javascript" src="script.js"> 
-    
+     
     </script>
   </body>
 </html>

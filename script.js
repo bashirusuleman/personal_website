@@ -49,3 +49,46 @@ fetch("https://type.fit/api/quotes")
       author.innerHTML = data[randomIndex].author;
     }
   });
+
+
+
+  document.querySelector('#formdata').addEventListener('submit', event =>{  
+    event.preventDefault();  
+    const name = document.querySelector('#name').value;
+    const email = document.querySelector('#email').value;
+    const message = document.querySelector('#message').value;
+    var  msg = {
+       name : name,    
+       email : email,
+       message : message
+  };
+  console.log(msg);
+  fetch('https://7wcob29xb3.execute-api.us-east-1.amazonaws.com/dev/contact-us/', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+      body: JSON.stringify(msg),
+    })
+    .then(response => response.json())
+    .then(data=> {
+      document.getElementById("formdata").reset();
+      })
+    .catch((error) => {
+      console.error('Error:', error);
+    });
+})
+
+
+ 
+        
+
+
+
+  
+  
+     
+     
+  
+
+ 
