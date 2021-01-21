@@ -441,7 +441,7 @@ nav {
   text-transform: uppercase;
   }
 
-.contact form input,.contact form textarea{
+.contact form input,.contact form textarea, #btn{
   width:90%;
   font-size:1.3rem;
   padding:0.6rem;
