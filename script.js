@@ -50,7 +50,7 @@ fetch("https://type.fit/api/quotes")
     }
   });
 
-
+ const thankYouMessage = document.querySelector("#thank-you-message");
 
   document.querySelector('#formdata').addEventListener('submit', event =>{  
     event.preventDefault();  
@@ -71,8 +71,9 @@ fetch("https://type.fit/api/quotes")
       body: JSON.stringify(msg),
     })
     .then(response => response.json())
-    .then(data=> {
-      document.getElementById("formdata").reset();
+    .then(data=> {   
+      thankYouMessage.classList.add('show');
+      document.getElementById("formdata").reset();        
       })
     .catch((error) => {
       console.error('Error:', error);
