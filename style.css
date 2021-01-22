@@ -11,6 +11,10 @@ body {
   overflow-x: hidden;
   overflow: scroll; 
 }
+ 
+li{
+  text-decoration:none;
+  }
 
 .section-heading{
   font-family: "Roboto", sans-serif;  
@@ -261,7 +265,9 @@ nav {
   text-transform: uppercase;
   font-size: 1.4rem;
   }
-
+.project-details ul{
+  list-style: none;
+}
 .github-projects {
   background-color:#394989;
   border: none;
