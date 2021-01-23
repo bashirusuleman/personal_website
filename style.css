@@ -492,3 +492,15 @@ nav {
   width:90%;
   font-size:1.8rem;
 }
+
+/*-----------------------------------------FOOTER-------------------------------------*/ 
+footer{
+  text-align:center;
+  background-color: #394989;
+  border-top: solid 12px #ffc93c;
+  color:#d0e8f2;
+  font-family: "Roboto", sans-serif;
+  height:30%;
+}
+
+
