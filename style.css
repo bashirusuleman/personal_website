@@ -493,6 +493,11 @@ nav {
   font-size:1.8rem;
 }
 
+#counter-text{
+  color:#394989;
+  margin-top:40px;
+  text-align:center;
+}
 /*-----------------------------------------FOOTER-------------------------------------*/ 
 footer{
   text-align:center;
@@ -500,7 +505,14 @@ footer{
   border-top: solid 12px #ffc93c;
   color:#d0e8f2;
   font-family: "Roboto", sans-serif;
-  height:30%;
+  height:50px;  
 }
 
+.designedby{
+  text-align: center;
+  margin:auto; 
+}
 
+.designedby p{
+  padding-top: 10px;
+}

@@ -12,11 +12,11 @@ hamburger.addEventListener("click", () => {
 });
 
 const nav = document.querySelector("nav");
-const home = document.querySelector(".home");
+ // const home = document.querySelector(".home");
 
-const homeOptions = {};
+// const homeOptions = {};
 
-const homeObserver = new IntersectionObserver(function (entries, homeObserver) {
+/* const homeObserver = new IntersectionObserver(function (entries, homeObserver) {
   entries.forEach((entry) => {
     if (!entry.isIntersecting) {
       nav.classList.add("scrolled");
@@ -25,8 +25,13 @@ const homeObserver = new IntersectionObserver(function (entries, homeObserver) {
     }
   });
 }, homeOptions);
+homeObserver.observe(home);  */
 
-homeObserver.observe(home);
+window.addEventListener("scroll", function(){
+  nav.classList.add("scrolled");
+})
+
+
 
 /*-------------------------------QUOTES API SECTION ----------------*/
 const quote = document.getElementById("quote-of-day");
@@ -38,7 +43,7 @@ setInterval(()=>{fetch("https://type.fit/api/quotes")
   return response.json();
 })
 .then(function (data) {
-  for (let i = 0; i < data.length; ++i) {
+  for (let i = 0; i < data.length; i++) {
     randomIndex = Math.floor(Math.random() * i);
   }
   quote.innerHTML = data[randomIndex].text;
@@ -93,16 +98,32 @@ yearId.innerHTML = yearDate.getFullYear();
 
 
 /* ---------------Page Counter------------------------------*/
-function counter_fn(){
-  var counter = document.getElementById("counter").innerHTML;
-  console.log(counter);
-  var count = 0;
-  count = parseInt(counter);
-  count = count++;
-  counter.innerHTML = parseInt(count);
-  console.log(counter);
-}
-window.onload = counter_fn; 
+var counter = document.getElementById("counter");
+count = 0;
+
+window.addEventListener('load', function(){
+
+  fetch('https://qb16pblecc.execute-api.us-east-1.amazonaws.com/dev/counter', {
+    method: 'GET',
+    mode: 'cors',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+      body: JSON.stringify(),
+    })
+    .then(response => response.json())
+    .then(data=> {   
+      count= data.body.visitorsCount;  
+      counter.innerHTML = count;      
+      })
+    .catch((error) => {
+      console.error('Error:', error);
+    });
+
+   
+});
+
+
 /*
 document.querySelector('#counter')+.addEventListener('onload', event =>{  
   event.preventDefault();  
