@@ -12,11 +12,11 @@ hamburger.addEventListener("click", () => {
 });
 
 const nav = document.querySelector("nav");
-const home = document.querySelector(".home");
+ // const home = document.querySelector(".home");
 
-const homeOptions = {};
+// const homeOptions = {};
 
-const homeObserver = new IntersectionObserver(function (entries, homeObserver) {
+/* const homeObserver = new IntersectionObserver(function (entries, homeObserver) {
   entries.forEach((entry) => {
     if (!entry.isIntersecting) {
       nav.classList.add("scrolled");
@@ -25,32 +25,40 @@ const homeObserver = new IntersectionObserver(function (entries, homeObserver) {
     }
   });
 }, homeOptions);
+homeObserver.observe(home);  */
 
-homeObserver.observe(home);
+window.addEventListener("scroll", function(){
+  nav.classList.add("scrolled");
+})
+
+
 
 /*-------------------------------QUOTES API SECTION ----------------*/
 const quote = document.getElementById("quote-of-day");
 const author = document.getElementById("author");
 let randomIndex = null;
-fetch("https://type.fit/api/quotes")
-  .then(function (response) {
-    return response.json();
-  })
-  .then(function (data) {
-    for (let i = 0; i < data.length; ++i) {
-      randomIndex = Math.floor(Math.random() * i);
-    }
-    quote.innerHTML = data[randomIndex].text;
 
-    /*-----Checking for Anonymous quotes----*/
-    if (data[randomIndex].author == null) {
-      author.innerHTML = "Anonymous";
-    } else {
-      author.innerHTML = data[randomIndex].author;
-    }
-  });
+setInterval(()=>{fetch("https://type.fit/api/quotes")
+.then(function (response) {
+  return response.json();
+})
+.then(function (data) {
+  for (let i = 0; i < data.length; i++) {
+    randomIndex = Math.floor(Math.random() * i);
+  }
+  quote.innerHTML = data[randomIndex].text;
 
+  /*-----Checking for Anonymous quotes----*/
+  if (data[randomIndex].author == null) {
+    author.innerHTML = "Anonymous";
+  } else {
+    author.innerHTML = data[randomIndex].author;
+  }
+})},6000)
 
+;
+
+ const thankYouMessage = document.querySelector("#thank-you-message");
 
   document.querySelector('#formdata').addEventListener('submit', event =>{  
     event.preventDefault();  
@@ -61,8 +69,7 @@ fetch("https://type.fit/api/quotes")
        name : name,    
        email : email,
        message : message
-  };
-  console.log(msg);
+  };  
   fetch('https://7wcob29xb3.execute-api.us-east-1.amazonaws.com/dev/contact-us/', {
     method: 'POST',
     headers: {
@@ -71,8 +78,9 @@ fetch("https://type.fit/api/quotes")
       body: JSON.stringify(msg),
     })
     .then(response => response.json())
-    .then(data=> {
-      document.getElementById("formdata").reset();
+    .then(data=> {   
+      thankYouMessage.classList.add('show');
+      document.getElementById("formdata").reset();        
       })
     .catch((error) => {
       console.error('Error:', error);
@@ -80,10 +88,73 @@ fetch("https://type.fit/api/quotes")
 })
 
 
+/* ---------------Date for Copyright ID------------------------------*/
  
-        
+const yearId = document.getElementById("yeardate");
+const yearDate =  new Date();
+
+yearId.innerHTML = yearDate.getFullYear();
 
 
+
+/* ---------------Page Counter------------------------------*/
+var counter = document.getElementById("counter");
+count = 0;
+
+window.addEventListener('load', function(){
+
+  fetch('https://qb16pblecc.execute-api.us-east-1.amazonaws.com/dev/counter', {
+    method: 'GET',
+    mode: 'cors',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+      body: JSON.stringify(),
+    })
+    .then(response => response.json())
+    .then(data=> {   
+      count= data.body.visitorsCount;  
+      counter.innerHTML = count;      
+      })
+    .catch((error) => {
+      console.error('Error:', error);
+    });
+
+   
+});
+
+
+/*
+document.querySelector('#counter')+.addEventListener('onload', event =>{  
+  event.preventDefault();  
+  
+  const email = document.querySelector('#email').value;
+  const message = document.querySelector('#message').value;
+  var  msg = {
+     name : name,    
+     email : email,
+     message : message
+};  
+fetch('https://7wcob29xb3.execute-api.us-east-1.amazonaws.com/dev/contact-us/', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+    body: JSON.stringify(msg),
+  })
+  .then(response => response.json())
+  .then(data=> {   
+    thankYouMessage.classList.add('show');
+    document.getElementById("formdata").reset();        
+    })
+  .catch((error) => {
+    console.error('Error:', error);
+  });
+})
+
+
+
+*/
 
   
   

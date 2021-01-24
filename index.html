@@ -15,16 +15,16 @@
         <div class="line2"></div>
         <div class="line3"></div>
       </div>
-      <div class="navbar">        
+      <div class="navbar">    
         <ul class="nav-links">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Projects</a></li>
-          <li><a href="#">Skills</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
       </div>
     </nav>
-    <section class="home">
+    <section class="home" id="home">
       <div id=name-title>
         <h2> BASHIRU <span id=lastname>SULEMAN</span></h2>
         <h5> CLOUD ENGINEER  |  SYSTEMS ENGINEER  |  DEVOPS ENGINEER </h5>
@@ -35,43 +35,50 @@
          <p id="author"></p>
        </div>
     </section>
-    <section class=>
-      <section>
+    <section id="about">
       <div class="section-heading">
         <h2>ABOUT</h2>
       </div>      
       <div class="about-body"> 
         <div class="about-body-section">                 
-          <p>Bashiru is a skilled Cloud engineer with experience in network automation, infrastructure and application deployment. With over 6 years experience in IT/Telecommunication, and 2 years experience in cloud technologies, I can deploy and manage infrastructure  as well as applications both on premises and in the cloud. Currently working to gain hands-on skills in DevOps using various technologies and tools such as: Kubernetes, Docker, Ansible, Terraform, Web Servers and Databases</p>
+          <p>Bashiru is a skilled Cloud engineer with experience in network automation, infrastructure and application deployment. With over 6 years experience in IT/Telecommunication, and 2 years experience using cloud technologies. I can deploy, manage infrastructure and applications both on premises and in the cloud. Currently using various technologies and tools such as: Kubernetes, Docker, Ansible, Terraform, Web Servers, Databases and AWS Cloud among others.3a</p>
           <p>I also have vast experience in Telecommunication design and build, managing data centers and access network infrastructure design using coaxial cable and fibre.</p>
         </div>
         <div class="about-image">
           <img src="images/bash1.jpg" alt="Bashiru'Picture">
         </div>
-        <div class="about-body-icon">
-          <a href="https://linkedin.com/in/bashirusuleman" target="_blank"><i class="fa fa-linkedin fa-3x icon"></i></a>
+        <div class="about-body-icon">          
+          <a href="https://ca.linkedin.com/in/bashirusuleman?trk=profile-badge" target="_blank"><i class="fa fa-linkedin fa-3x icon"></i></a>
           <a href="https://github.com/bashirusuleman"  target="_blank"><i class="fa fa-github fa-4x icon"></i></a>      
           <a href=""><button id="resume-button">RESUME</button></a>
         </div> 
         <div class="about-body-section">
           <p >I graduated with a Masters degree in Electronic Systems Engineering from the University of Regina, SK, Canada, Bachelor of Engineering in Electrical/Electronic Engineering (graduated with First Class honors) and Diploma in Computer Engineering (graduated with Distinction)  from the University of Benin, Nigeria. I attended formal trainings in Cloud and DevOps engineering as well as a robust self-directed learning of tools and technologies to architect, build, automate, deploy and manage  applications.</p>
         </div>          
-      </section> 
+    </section> 
 
-    <section class="projects">
+    <section class="projects" id="projects">
         <div class="section-heading">
             <h2>PROJECTS</h2>
         </div>
         <div class="project-items">
           <ul>
             <li class="projects-list">
-              <h4 class="project-title">Lorem ipsum dolor sit.</h4>
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit provident accusantium, reprehenderit corrupti eum mollitia inventore esse praesentium enim ullam modi. Ad eius maxime doloremque saepe qui earum necessitatibus deserunt!</p>
+              <h4 class="project-title">Personal Portfolio Website</h4>
+              <p class="project-details">I developed and deployed this website adding various features like:
+                <ul>
+                  <li>Severless contact form  using AWS Lambda, API Gateway, Simple Email Service (SES)</li>
+                  <li>Web page visitors counter using AWS Lambda to call a function that update the counts of visitors in DynamodB</li>
+                  <li>Fetching inspirational quotes randomly from RESTApi and displayed on the home page</li>
+                  <li>AWS S3 for website hosting, delivery contents using Cloudfront with SSL termination via AWS Certificate manager (ACM),Route53 was used for DNS</li>                  
+                </u>
+                <h4>HTML, CSS and Javascript were used for website programming, Infrastructure as code was implemented using Terraform to deploy all infrastructure and for continous integration, a pipeline was created using AWS CodePipeline</h4>
+              </p>
               <button class="github-projects">Github</button>
             </li>
             <li class="projects-list">
-              <h4 class="project-title">Lorem ipsum dolor sit.</h4>
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit provident accusantium, reprehenderit corrupti eum mollitia inventore esse praesentium enim ullam modi. Ad eius maxime doloremque saepe qui earum necessitatibus deserunt!</p>
+              <h4 class="project-title">#40DAYSOFTERRAFORM</h4>
+              <p>I embarked on a personal challenge to deploy resources in AWS cloud using different architectures with inspiration drawn from various sources, most of which I earlier deployed manually using the console </p>
               <button class="github-projects">Github</button>
             </li>
             <li class="projects-list"> 
@@ -82,7 +89,7 @@
           </ul>
         </div>
     </section>
-    <section class="skills">
+    <section class="skills" id="skills">
       <div class="section-heading">
         <h2>CERTIFICATIONS & SKILLS</h2>
       </div>
@@ -148,12 +155,13 @@
      </div>
      </section>
     </section>
-    <section class="contact">
+    <section class="contact" id="contact">
       <div class="section-heading">
         <h2>CONTACT</h2>
       </div>
       <div class="contact-body">
-        <p>I am currently open for new opportunities in Cloud Engineering and DevOps. You can use the contact form below to reach me.</p>           
+        <p id="contact-message">I am currently open for new opportunities in Cloud Engineering and DevOps. You can use the contact form below to reach me.</p> 
+        <p id="thank-you-message">Thank your for reaching out. I will be in touch</p>         
       <div class="contact-form">  
             <form id="formdata" action="" method="POST">            
                 <div class="contact-details">
@@ -169,12 +177,19 @@
                   <textarea name="message" rows="5" cols="30" id="message" class="form-control"  required></textarea> 
                 </div>
                 <div>   
-                 <button type="submit">Submit</button> 
+                 <button type="submit" id="btn">Submit</button> 
                 </div> 
               </form>
+              <p id="counter-text">This site has been viewed <span id="counter"></span> times </p>
        </div>    
       </div>
       </section>
+      <footer>
+        <div class="designedby">
+            
+            <p>Bashiru <span id="lastname">Suleman</span> &copy; Copyright <span id="yeardate"></span></p>
+        </div>
+      </footer>
 
     <script type="text/javascript" src="script.js"> 
      

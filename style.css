@@ -11,6 +11,10 @@ body {
   overflow-x: hidden;
   overflow: scroll; 
 }
+ 
+li{
+  text-decoration:none;
+  }
 
 .section-heading{
   font-family: "Roboto", sans-serif;  
@@ -261,7 +265,9 @@ nav {
   text-transform: uppercase;
   font-size: 1.4rem;
   }
-
+.project-details ul{
+  list-style: none;
+}
 .github-projects {
   background-color:#394989;
   border: none;
@@ -441,12 +447,11 @@ nav {
   text-transform: uppercase;
   }
 
-.contact form input,.contact form textarea{
+.contact form input,.contact form textarea, #btn{
   width:90%;
   font-size:1.3rem;
   padding:0.6rem;
-  border: 1px solid #c9e6ff;
-   
+  border: 1px solid #c9e6ff;   
 }
 
 
@@ -469,4 +474,45 @@ nav {
   border: 4px solid #394989;
   padding:  11px 28px; 
   cursor: pointer;    
+}
+#contact-message{
+  margin:1rem 0;
+  font-size:1.1rem;
+  line-height:1.8;
+}
+
+#thank-you-message {
+  display:none;
+}
+
+#thank-you-message.show{
+  display:block;
+  background-color:#96bb7c;
+  padding 0 2rem;
+  width:90%;
+  font-size:1.8rem;
+}
+
+#counter-text{
+  color:#394989;
+  margin-top:40px;
+  text-align:center;
+}
+/*-----------------------------------------FOOTER-------------------------------------*/ 
+footer{
+  text-align:center;
+  background-color: #394989;
+  border-top: solid 12px #ffc93c;
+  color:#d0e8f2;
+  font-family: "Roboto", sans-serif;
+  height:50px;  
+}
+
+.designedby{
+  text-align: center;
+  margin:auto; 
+}
+
+.designedby p{
+  padding-top: 10px;
 }
