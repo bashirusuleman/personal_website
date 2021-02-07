@@ -184,7 +184,7 @@ nav {
   bottom:2px;
   color: #a6a9b6;
   font-style: italic; 
-  margin-top:5px;
+  margin:5px 2px;;
 
 }
 
@@ -219,7 +219,7 @@ nav {
   display:grid;
   grid-template-columns: 1fr 1fr;
   font-family: "Roboto", sans-serif;
-  margin:40px 80px;
+  margin:40px 60px;
   line-height: 1.6;
 } 
 .about-image img{
@@ -249,7 +249,7 @@ nav {
 /*---------------------------------------PROJECTS SECTION ------------------------------*/
 
 .project-items{
-  margin: 40px 80px;
+  margin: 40px 40px;
   line-height: 1.5;
   font-family: "Roboto", sans-serif;
 }
@@ -296,7 +296,7 @@ nav {
 }
 
 .skills-body{
-  margin:40px 80px;
+  margin:40px 60px;
 }
 .certification-items{
   display: grid;
@@ -434,7 +434,7 @@ nav {
 
 /*----------------------------------------CONTACT SECTION-----------------------------------*/
 .contact-body{
-  margin:30px 20%;  
+  margin:30px 15%;  
 }
 
 /*------------------------------------------FORM STYLES--------------------------------------*/ 
