@@ -15,5 +15,5 @@ phases:
     
   post_build:    
     commands:
-      - "build process completed"
+      - "echo build process completed"
       
