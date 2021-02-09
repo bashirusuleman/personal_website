@@ -30,7 +30,7 @@
         <h5> CLOUD ENGINEER  |  SYSTEMS ENGINEER  |  DEVOPS ENGINEER </h5>
        </div>
        <div class="quotes">
-         <h3>Random quote of the day:</3>
+         <!-- <h3>Random quote of the day:</3> -->
          <h4 id="quote-of-day"></h4>
          <p id="author"></p>
        </div>
@@ -62,31 +62,45 @@
             <h2>PROJECTS</h2>
         </div>
         <div class="project-items">
-          <ul>
-            <li class="projects-list">
-              <h4 class="project-title">Personal Portfolio Website</h4>
-              <p class="project-details">I developed and deployed this website adding various features like:
+          <ol>
+            <li class="projects-list">Personal Portfolio Website</li>              
+              
+            <div class="project-description">
+               <div class="project-details">
+                <p class="">I developed and deployed this website adding various features like:</p>
                 <ul>
                   <li>Severless contact form  using AWS Lambda, API Gateway, Simple Email Service (SES)</li>
                   <li>Web page visitors counter using AWS Lambda to call a function that update the counts of visitors in DynamodB</li>
-                  <li>Fetching inspirational quotes randomly from RESTApi and displayed on the home page</li>
-                  <li>AWS S3 for website hosting, delivery contents using Cloudfront with SSL termination via AWS Certificate manager (ACM),Route53 was used for DNS</li>                  
-                </u>
-                <h4>HTML, CSS and Javascript were used for website programming, Infrastructure as code was implemented using Terraform to deploy all infrastructure and for continous integration, a pipeline was created using AWS CodePipeline</h4>
-              </p>
-              <button class="github-projects">Github</button>
-            </li>
-            <li class="projects-list">
+                  <li>Fetching inspirational quotes randomly from API and displayed on the home page, updates every 10 seconds</li>
+                  <li>AWS S3 for website hosting, delivery contents using Cloudfront with SSL termination via AWS Certificate manager (ACM),Route53 was used for DNS</li>
+                  <li>HTML, CSS and Javascript were used for website programming, Infrastructure as code (IAC) was implemented using Terraform to deploy all AWS services and for continous integration, a pipeline was created using AWS CodePipeline</li>                  
+                </u> 
+                </ul>
+                <button class="github-projects">Github</button>
+               </div>
+                <div class="project-img">
+                  <img src="images/Network Architecture.png">
+                </div>                            
+              </div>            
+               
+             
+              
+            
+        
+            <li class="projects-list"></li>
               <h4 class="project-title">#40DAYSOFTERRAFORM</h4>
               <p>I embarked on a personal challenge to deploy resources in AWS cloud using different architectures with inspiration drawn from various sources, most of which I earlier deployed manually using the console </p>
               <button class="github-projects">Github</button>
-            </li>
+            
+          
+          
             <li class="projects-list"> 
               <h4 class="project-title">Lorem ipsum dolor sit.</h4>
               <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit provident accusantium, reprehenderit corrupti eum mollitia inventore esse praesentium enim ullam modi. Ad eius maxime doloremque saepe qui earum necessitatibus deserunt!</p>
               <button class="github-projects">Github</button>
             </li>
           </ul>
+          </ol>
         </div>
     </section>
     <section class="skills" id="skills">
@@ -105,8 +119,7 @@
        </ul>
      
        <h4 class="certification-heading">Skills</h4>
-       <p class="certification-text">Below are some of the tools and technologies I have worked with. I also engaged in self-directed continous learning to broaden my understanding of respective technologies.</p>
-    
+       <p class="certification-text">Below are some of the tools and technologies I have worked with. I also engaged in self-directed continous learning to broaden my understanding of respective technologies.</p>    
      <div class=skills-list>
        <ol>
          <li class="skills-tools">KUBERNETES</li>
@@ -169,8 +182,8 @@
                   <input type="text" class="form-control" id="name"  required>
                 </div>
                 <div class="contact-details">
-                  <label class="contact-label">Email</label>
-                  <input type="email" class="form-control" id="email" >
+                  <label class="contact-label">Subject</label>
+                  <input type="text" class="form-control" id="Subject" >
                 </div>               
                 <div class="contact-details">
                   <label class="contact-label">Message</label>

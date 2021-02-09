@@ -5,6 +5,7 @@
   font-family: "Poppins", sans-serif;
   letter-spacing: 1px;
   scroll-behavior: smooth;
+  box-sizing: border-box;
 }
 
 body {
@@ -255,7 +256,7 @@ nav {
 }
 
 .project-items ul{
-  list-style: square outside none; 
+  list-style: circle outside none; 
  }
 .projects-list{
   padding:10px 0;
@@ -265,8 +266,23 @@ nav {
   text-transform: uppercase;
   font-size: 1.4rem;
   }
-.project-details ul{
-  list-style: none;
+.project-details{
+  font-size: 1.1rem;
+  line-height: 1.7;
+  text-align: left;
+}
+
+.project-img img{
+  width: 95%;
+  height:95%;
+ 
+}
+
+.project-description{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 50px;
+
 }
 .github-projects {
   background-color:#394989;
@@ -311,7 +327,7 @@ nav {
     font-size: 1.5rem;
     color:#394989;
   }
-.skills-tools{
+.skills-tools, .projects-list{
   padding: 1rem 0;
   color:#394989;
   font-size: 1.3rem;

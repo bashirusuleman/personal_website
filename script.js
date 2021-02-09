@@ -36,25 +36,27 @@ window.addEventListener("scroll", function(){
 /*-------------------------------QUOTES API SECTION ----------------*/
 const quote = document.getElementById("quote-of-day");
 const author = document.getElementById("author");
+const urlQuote = "https://type.fit/api/quotes";
 let randomIndex = null;
 
-setInterval(()=>{fetch("https://type.fit/api/quotes")
-.then(function (response) {
-  return response.json();
-})
-.then(function (data) {
+const inspirationalQuotes = ()=>{fetch(urlQuote)
+                .then(function (response) {
+                  return response.json();})
+                  .then(function (data) {
   for (let i = 0; i < data.length; i++) {
     randomIndex = Math.floor(Math.random() * i);
   }
-  quote.innerHTML = data[randomIndex].text;
+  quote.innerHTML = `"${data[randomIndex].text}"`;
 
   /*-----Checking for Anonymous quotes----*/
   if (data[randomIndex].author == null) {
     author.innerHTML = "Anonymous";
   } else {
-    author.innerHTML = data[randomIndex].author;
+    author.innerHTML =`... ${data[randomIndex].author}`;
   }
-})},6000)
+})}
+
+setInterval(inspirationalQuotes, 10000);
 
 ;
 
@@ -63,14 +65,15 @@ setInterval(()=>{fetch("https://type.fit/api/quotes")
   document.querySelector('#formdata').addEventListener('submit', event =>{  
     event.preventDefault();  
     const name = document.querySelector('#name').value;
-    const email = document.querySelector('#email').value;
+    const subject = document.querySelector('#email').value;
     const message = document.querySelector('#message').value;
+    const url = 'https://7wcob29xb3.execute-api.us-east-1.amazonaws.com/dev/contact-us/';
     var  msg = {
        name : name,    
-       email : email,
+       subject : subject,
        message : message
   };  
-  fetch('https://7wcob29xb3.execute-api.us-east-1.amazonaws.com/dev/contact-us/', {
+  fetch(url, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
