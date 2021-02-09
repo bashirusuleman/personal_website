@@ -282,7 +282,6 @@ nav {
   display:grid;
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 50px;
-
 }
 .github-projects {
   background-color:#394989;
@@ -422,7 +421,16 @@ nav {
     li.fade {
       opacity: 1;
     }
-    
+
+    .project-description{
+      display:grid;
+      grid-template-columns: 1fr;
+    }
+    .project-img img{
+      width: 100%;
+      height:100%;
+      margin:40px auto;     
+    }
     .certification-items{      
       grid-template-columns: 1fr;
     }

@@ -65,7 +65,7 @@ setInterval(inspirationalQuotes, 10000);
   document.querySelector('#formdata').addEventListener('submit', event =>{  
     event.preventDefault();  
     const name = document.querySelector('#name').value;
-    const subject = document.querySelector('#email').value;
+    const subject = document.querySelector('#subject').value;
     const message = document.querySelector('#message').value;
     const url = 'https://7wcob29xb3.execute-api.us-east-1.amazonaws.com/dev/contact-us/';
     var  msg = {
