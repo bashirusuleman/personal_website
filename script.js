@@ -121,45 +121,11 @@ window.addEventListener('load', function(){
       })
     .catch((error) => {
       console.error('Error:', error);
-    });
-
-   
+    });   
 });
 
 
-/*
-document.querySelector('#counter')+.addEventListener('onload', event =>{  
-  event.preventDefault();  
-  
-  const email = document.querySelector('#email').value;
-  const message = document.querySelector('#message').value;
-  var  msg = {
-     name : name,    
-     email : email,
-     message : message
-};  
-fetch('https://7wcob29xb3.execute-api.us-east-1.amazonaws.com/dev/contact-us/', {
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/json',
-  },
-    body: JSON.stringify(msg),
-  })
-  .then(response => response.json())
-  .then(data=> {   
-    thankYouMessage.classList.add('show');
-    document.getElementById("formdata").reset();        
-    })
-  .catch((error) => {
-    console.error('Error:', error);
-  });
-})
 
-
-
-*/
-
-  
   
      
      
