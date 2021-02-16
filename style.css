@@ -332,8 +332,6 @@ nav {
   font-size: 1.3rem;
   }
 
-
-
   @media screen and (max-width: 900px) {
     nav {
       position: fixed;
@@ -454,14 +452,12 @@ nav {
   }
 
 
-
-
 /*----------------------------------------CONTACT SECTION-----------------------------------*/
 .contact-body{
   margin:30px 15%;  
 }
 
-/*------------------------------------------FORM STYLES--------------------------------------*/ 
+/*----------------------------------------- CONTACT-FORM STYLES--------------------------------------*/ 
 
 .contact form label{
   display: block;
@@ -472,7 +468,7 @@ nav {
   }
 
 .contact form input,.contact form textarea, #btn{
-  width:90%;
+  width:80%;
   font-size:1.3rem;
   padding:0.6rem;
   border: 1px solid #c9e6ff;   
