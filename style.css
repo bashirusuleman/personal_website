@@ -46,16 +46,9 @@ nav {
 }
 
 .scrolled {
-  background-color: #00007a;
+  background-color: #4a47a3;
   backdrop-filter: blue(10px);
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.404);
-}
-
-.logo {
-  text-align: center;
-  flex: 0.1;
-  color: #ffff00;
-  margin-top: 17px;
 }
 
 .navbar {
@@ -78,7 +71,7 @@ nav {
 .nav-links li a {
   text-decoration: none;
   margin: 0 1.5vw;
-  color: #ffff00;
+  color: #ffc93c;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   letter-spacing: 0px;
@@ -116,7 +109,7 @@ nav {
 .hamburger div {
   height: 3px;
   width: 30px;
-  background: #ffff00;
+  background: #ffc93c;
   transition: all 0.3s ease;
   margin: 5px;
 }
@@ -153,7 +146,7 @@ nav {
 .home{
   height: 100vh;
   width: 100%;
-  background-color: #6f33d1;
+  background-color: #290149;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -361,7 +354,7 @@ nav {
       margin-bottom: 100px;
     }
     .nav-links li a {
-      color: #ffff00;
+      color: #ffc93c;
     }
     .nav-links li a::before {
       background-color: #ffffa2;

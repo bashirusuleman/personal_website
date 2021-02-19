@@ -72,7 +72,8 @@ setInterval(inspirationalQuotes, 10000);
        name : name,    
        subject : subject,
        message : message
-  };  
+  }; 
+
   fetch(url, {
     method: 'POST',
     headers: {
@@ -103,10 +104,13 @@ yearId.innerHTML = yearDate.getFullYear();
 /* ---------------Page Counter------------------------------*/
 var counter = document.getElementById("counter");
 count = 0;
+const urlCounter = "https://qb16pblecc.execute-api.us-east-1.amazonaws.com/dev/counter";
+
+
 
 window.addEventListener('load', function(){
 
-  fetch('https://qb16pblecc.execute-api.us-east-1.amazonaws.com/dev/counter', {
+  fetch(urlCounter, {
     method: 'GET',
     mode: 'cors',
     headers: {
