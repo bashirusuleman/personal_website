@@ -12,21 +12,7 @@ hamburger.addEventListener("click", () => {
 });
 
 const nav = document.querySelector("nav");
- // const home = document.querySelector(".home");
-
-// const homeOptions = {};
-
-/* const homeObserver = new IntersectionObserver(function (entries, homeObserver) {
-  entries.forEach((entry) => {
-    if (!entry.isIntersecting) {
-      nav.classList.add("scrolled");
-    } else {
-      nav.classList.remove(".scrolled");
-    }
-  });
-}, homeOptions);
-homeObserver.observe(home);  */
-
+ 
 window.addEventListener("scroll", function(){
   nav.classList.add("scrolled");
 })

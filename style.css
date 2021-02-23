@@ -227,6 +227,7 @@ nav {
 
 .about-body-section p{
  margin:10px 0;
+ font-family: "Roboto", sans-serif;
 }
 .fa-linkedin{
   color:#fff;
@@ -258,10 +259,11 @@ nav {
   text-transform: uppercase;
   font-size: 1.4rem;
   }
-.project-details{
+.project-details p, .project-details ul li{
   font-size: 1.1rem;
   line-height: 1.7;
   text-align: left;
+  font-family: "Roboto", sans-serif;
 }
 
 .project-img img{
