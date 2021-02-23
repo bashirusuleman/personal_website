@@ -1,17 +1,14 @@
 version: 0.2
    
-phases:
-  
+phases:  
   pre_build:    
     commands:
-      - "echo Initiating build process"
-      
+      - "echo Initiating build process"     
     
   build:    
     commands:
       - "echo Copying repo content to s3 bucket"
-      - aws s3 sync . s3://$SOURCE_BUCKET_NAME --exclude buildspec.yml --exclude .gitignore
-      
+      - aws s3 sync . s3://$SOURCE_BUCKET_NAME --exclude buildspec.yml --exclude .gitignore      
     
   post_build:    
     commands:

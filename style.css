@@ -227,6 +227,7 @@ nav {
 
 .about-body-section p{
  margin:10px 0;
+ font-family: "Roboto", sans-serif;
 }
 .fa-linkedin{
   color:#fff;
@@ -258,10 +259,11 @@ nav {
   text-transform: uppercase;
   font-size: 1.4rem;
   }
-.project-details{
+.project-details p, .project-details ul li{
   font-size: 1.1rem;
   line-height: 1.7;
   text-align: left;
+  font-family: "Roboto", sans-serif;
 }
 
 .project-img img{
@@ -319,10 +321,18 @@ nav {
     color:#394989;
   }
 .skills-tools, .projects-list{
-  padding: 1rem 0;
+  padding: 0.5rem 0;
   color:#394989;
   font-size: 1.3rem;
   }
+  
+  .skills-list  ul li,.skills-body p {
+    font-family: "Roboto", sans-serif;  
+    font-size: 1.1rem;
+    line-height: 1.7;
+  }
+
+
 
   @media screen and (max-width: 900px) {
     nav {
@@ -419,7 +429,7 @@ nav {
     .project-img img{
       width: 100%;
       height:100%;
-      margin:40px auto;     
+      margin:40px 0;     
     }
     .certification-items{      
       grid-template-columns: 1fr;
@@ -427,7 +437,7 @@ nav {
 
     .about-body{      
       grid-template-columns: 1fr;
-      margin:40px 40px;
+      margin:40px 10px;
   }
   .about-image img{
     border: double 8px #CFD3CE;
@@ -438,7 +448,7 @@ nav {
   }
 
   .contact-body{
-    margin:0;  
+    margin:auto;  
      }
   
   }
