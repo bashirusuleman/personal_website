@@ -42,7 +42,7 @@ const inspirationalQuotes = ()=>{fetch(urlQuote)
   }
 })}
 
-setInterval(inspirationalQuotes, 10000);
+setInterval(inspirationalQuotes, 20000);
 
 ;
 
