@@ -16,6 +16,23 @@ pipeline {
       }
     }
 
+    stage('Deploy Image') {
+      steps {
+        script {
+          docker.withRegistry( '', registryCredential ) {
+            dockerImage.push()
+          }
+        }
+
+      }
+    }
+
+    stage('Remove Image Unused Image') {
+      steps {
+        sh 'docker rmi $registry:$BUILD_NUMBER'
+      }
+    }
+
   }
   environment {
     registry = 'exbashorun/personalwebsite'
