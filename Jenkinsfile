@@ -13,6 +13,7 @@ pipeline {
           dockerImage = docker.build registry + ":$BUILD_NUMBER"
         }
 
+        archiveArtifacts(artifacts: 'target/*.jar', fingerprint: true)
       }
     }
 
